@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var sparse = [];
+        var dense = [];
+        sparse[9999] = 'asdf';
+
+        for ( var i = 0; i < 10000; i++ ) {
+            dense[i] = i.toString();
+        }
+        dense[9999] = 'asdf';
+        console.log([].concat([1,2],[3,[2,3,4]]));
+
+        ({
+            print: function (){
+                console.log('Hello World!');
+            }
+        }.print());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

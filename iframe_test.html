@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function (){
+             console.log(document.getElementById('iframe').contentWindow);
+            alert(document.getElementById('iframe').contentWindow['x'] instanceof Array);
+        });
+    </script>
+</head>
+<body>
+<iframe id="iframe" src="iframe.html" frameborder="0" height="500" width="500" style="border: 1px solid #eee;"></iframe>
+</body>
+</html>

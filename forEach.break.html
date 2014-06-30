@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        // forEach does not provide of a way to break out of a loop
+        // hence we throw an error and handle it to break out
+
+        console.log();
+
+        [1, 2, 3, undefined, 4, 5, 6].forEach(function (elem){
+                 console.log('Square of ' + elem + ' is ' + elem * elem);
+        });
+
+        // write custom foreach break if undefined is present
+        console.log('\n\n\nstarting with try catch statement ... ');
+        try {
+            [1, 2, 3, undefined, 4, 5, 6].forEach(function (elem){
+                if ( typeof elem === 'undefined' ) {
+                    throw Error('For Each Break Error');
+                } else {
+                    console.log('Square of ' + elem + ' is ' + elem * elem);
+                }
+            });
+        } catch (e) {
+            console.log(e.message);
+        }
+
+        // define a general purpose forEach function that allows us to break out of a loop
+        // throw the appropriate error to break out of it;
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
